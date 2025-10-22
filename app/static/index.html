@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Verification Gateway</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Telegram Verification Gateway</h1>
+
+        <div class="section">
+            <h2>Start Verification</h2>
+            <form id="startForm">
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="tel" id="phoneNumber" name="phone_number" placeholder="+1234567890" required>
+                </div>
+                <div class="form-group">
+                    <label for="payload">Payload (optional):</label>
+                    <input type="text" id="payload" name="payload" placeholder="test">
+                </div>
+                <button type="submit" class="btn btn-primary">Send Verification Code</button>
+            </form>
+            <div id="startResponse" class="response"></div>
+        </div>
+
+        <div class="section">
+            <h2>Verify Code</h2>
+            <form id="verifyForm">
+                <div class="form-group">
+                    <label for="verifyPhoneNumber">Phone Number:</label>
+                    <input type="tel" id="verifyPhoneNumber" name="phone_number" placeholder="+1234567890" required>
+                </div>
+                <div class="form-group">
+                    <label for="code">Verification Code:</label>
+                    <input type="text" id="code" name="code" placeholder="123456" required maxlength="6">
+                </div>
+                <button type="submit" class="btn btn-success">Verify Code</button>
+            </form>
+            <div id="verifyResponse" class="response"></div>
+        </div>
+
+        <div class="section">
+            <h2>API Status</h2>
+            <div id="apiStatus" class="status">Checking API status...</div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
