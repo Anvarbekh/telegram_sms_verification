@@ -4,7 +4,7 @@ FastAPI service that uses Telegram Gateway API to send verification codes and ve
 
 Setup:
 
-1. Copy `env.dev.example` to `env.dev` and fill values (do NOT commit `env.dev`).
+1. Copy `env.dev.example` to `env.dev` and fill values
 2. Start with Docker Compose: `docker-compose up --build`.
 3. Create DB tables (app will auto-create on startup).
 
